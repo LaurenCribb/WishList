@@ -2,6 +2,10 @@ fa-icon{
     cursor: pointer;
 }
 
+fa-icon:hover{
+    color:orange;
+}
+
 .rated{
     color: gold;
 }

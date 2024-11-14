@@ -13,4 +13,9 @@ import { WishListItem } from '../interfaces/wish-list-item';
 })
 export class WishListItemsComponent {
   items: WishListItem[] = placeholderItems;
+  newRatingScore: number = 0;
+
+  setRating(newRating: number, i: number){
+    this.items[i].starRating = newRating 
+  }
 }

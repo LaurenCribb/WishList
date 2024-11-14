@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -14,6 +14,7 @@ export class StarRatingDisplayComponent {
  star = faStar;
 
  @Input() rating! : number;
+ @Output() newRating = new EventEmitter<number>();
 
  numSequence(value: number): number[] {
     return Array(value);
@@ -21,6 +22,7 @@ export class StarRatingDisplayComponent {
 
  setRating(value: number) {
   this.rating = value;
+  this.newRating.emit(this.rating);
  }
 
 }
