@@ -1,4 +1,6 @@
-<span *ngFor="let n of numSequence(rating)">
-    <fa-icon [icon]="star"></fa-icon>
+<span *ngFor="let n of numSequence(rating); let i=index">
+    <fa-icon class="rated" [icon]="star" (click)="setRating(i+1)"></fa-icon>
 </span>
-
+<span *ngFor="let n of numSequence(5-rating); let i=index">
+    <fa-icon class="unrated" [icon]="star" (click)="setRating(rating+i+1)"></fa-icon>
+</span>

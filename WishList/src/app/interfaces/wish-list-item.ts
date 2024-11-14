@@ -2,6 +2,6 @@ export interface WishListItem {
     id: number;
     name: string;
     image?: string;
-    starRating?: number;
+    starRating: number;
     price?: number;
 }

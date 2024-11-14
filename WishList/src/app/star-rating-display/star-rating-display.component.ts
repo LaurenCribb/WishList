@@ -13,10 +13,14 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 export class StarRatingDisplayComponent {
  star = faStar;
 
- @Input() rating:any = 0;
+ @Input() rating! : number;
 
- numSequence(rating: any): any[] {
-    return Array(rating);
+ numSequence(value: number): number[] {
+    return Array(value);
+ }
+
+ setRating(value: number) {
+  this.rating = value;
  }
 
 }

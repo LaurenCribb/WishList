@@ -1,4 +1,11 @@
 fa-icon{
-    color: gold;
     cursor: pointer;
+}
+
+.rated{
+    color: gold;
+}
+
+.unrated{
+    color: grey;
 }
