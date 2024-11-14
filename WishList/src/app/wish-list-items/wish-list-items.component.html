@@ -13,7 +13,7 @@
         <th scope="row">{{items.indexOf(item) + 1}}</th>
         <td>{{item.name}}</td>
         <td>
-          <app-star-rating-display></app-star-rating-display>
+           <app-star-rating-display [rating]="item.starRating"></app-star-rating-display>
         </td>
         <td>{{item.price}}</td>
       </tr>
