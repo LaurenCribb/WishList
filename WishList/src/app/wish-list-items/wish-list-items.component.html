@@ -1,0 +1,19 @@
+<h1>My wishlist</h1>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Star Rating</th>
+        <th scope="col">Price (£)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <th scope="row">{{items.indexOf(item) + 1}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.starRating}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
