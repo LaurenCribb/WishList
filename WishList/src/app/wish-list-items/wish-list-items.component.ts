@@ -18,7 +18,7 @@ export class WishListItemsComponent implements AfterViewInit{
   private _liveAnnouncer = inject(LiveAnnouncer);
   itemsList: WishListItem[] = placeholderItems;
   items = new MatTableDataSource(placeholderItems);
-  displayedColumns: string[] = ['#', 'Image', 'Name', 'starRating', 'price'];
+  displayedColumns: string[] = ['#', 'image', 'name', 'starRating', 'price'];
   newRatingScore: number = 0;
 
   
