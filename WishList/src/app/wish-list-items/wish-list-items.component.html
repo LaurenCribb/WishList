@@ -17,10 +17,11 @@
     <td mat-cell *matCellDef="let item">{{item.name}}</td>
   </ng-container>
 
-  <ng-container matColumnDef="StarRating">
+  <ng-container matColumnDef="starRating">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by star rating"> Star Rating </th>
     <td mat-cell *matCellDef="let item; let i = index">
-      <app-star-rating-display [rating]="item.starRating" (newRating)="setRating($event, i)"></app-star-rating-display>
+      {{item.starRating}}
+      <app-star-rating-display [rating]="item.starRating" (newRating)="setRating($event, item.id-1)"></app-star-rating-display>
     </td>
   </ng-container>
 
