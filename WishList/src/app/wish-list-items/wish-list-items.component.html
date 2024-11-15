@@ -17,12 +17,12 @@
     <td mat-cell *matCellDef="let item">{{item.name}}</td>
   </ng-container>
 
-  <!-- <ng-container matColumnDef="StarRating">
+  <ng-container matColumnDef="StarRating">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by star rating"> Star Rating </th>
     <td mat-cell *matCellDef="let item; let i = index">
       <app-star-rating-display [rating]="item.starRating" (newRating)="setRating($event, i)"></app-star-rating-display>
     </td>
-  </ng-container> -->
+  </ng-container>
 
   <ng-container matColumnDef="price">
     <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by price"> Price (£) </th>

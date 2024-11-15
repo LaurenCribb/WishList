@@ -16,9 +16,9 @@ import { LiveAnnouncer } from '@angular/cdk/a11y';
 })
 export class WishListItemsComponent implements AfterViewInit{
   private _liveAnnouncer = inject(LiveAnnouncer);
-  items = new MatTableDataSource(placeholderItems);;
-  // need to add star rating and # back in once sorting figured out
-  displayedColumns: string[] = ['#', 'Image', 'Name', 'price'];
+  itemsList: WishListItem[] = placeholderItems;
+  items = new MatTableDataSource(placeholderItems);
+  displayedColumns: string[] = ['#', 'Image', 'Name', 'StarRating', 'price'];
   newRatingScore: number = 0;
 
   
@@ -28,8 +28,9 @@ export class WishListItemsComponent implements AfterViewInit{
     this.items.sort = this.sort;
   }
   
-  // setRating(newRating: number, i: number){
-  //   this.items[i].starRating = newRating 
-  // }
+  setRating(newRating: number, i: number){
+    this.itemsList[i].starRating = newRating;
+    console.log(this.itemsList[i]);
+  }
 
 }
